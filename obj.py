@@ -1,4 +1,4 @@
-# SR3 Models
+# SR4 Flat-Shading
 # Graficas por computadora 
 # Esteban Aldana Guerra 20591
 
@@ -8,7 +8,7 @@ class Obj(object):
             self.lines = f.read().splitlines()
 
         self.vertices = []
-        self.faces = []
+        self.vfaces = []
         self.read()
 
     def read(self):
@@ -19,4 +19,4 @@ class Obj(object):
                 if prefix == 'v': 
                     self.vertices.append(list(map(float, value.split(' ')))) 
                 elif prefix == 'f':
-                    self.faces.append([list(map(int , face.split('/'))) for face in value.split(' ')])
+                    self.vfaces.append([list(map(int , face.split('/'))) for face in value.split(' ')])

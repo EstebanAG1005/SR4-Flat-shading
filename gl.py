@@ -4,7 +4,6 @@
 
 import struct
 import random
-import numpy
 from obj import Obj
 from collections import namedtuple
 
